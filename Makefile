@@ -1,4 +1,4 @@
-OBJECTS= Node.o Stack.o
+OBJECTS= Node.o Stack.o Queue.o
 CXXFLAGS=
 
 main: main.o $(OBJECTS)
@@ -10,9 +10,11 @@ tests: tests.o $(OBJECTS)
 
 Stack.o: Stack.cpp Node.h
 
-main.o: main.cpp Stack.h Stack.o Node.h
+Queue.o: Queue.cpp
 
-tests.o: tests.cpp Stack.h Node.h
+main.o: main.cpp Stack.h Node.h Queue.h
+
+tests.o: tests.cpp Stack.h Node.h Queue.h
 
 Node.o: Node.cpp Node.h
 
