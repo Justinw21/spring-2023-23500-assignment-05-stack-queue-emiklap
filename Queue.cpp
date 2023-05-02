@@ -46,7 +46,7 @@ bool Queue::is_empty() {
   return false;
 }
 bool Queue::is_full() {
- if (tail > 10) {
+ if (tail >= 10) {
    return true;
  }
  return false;
