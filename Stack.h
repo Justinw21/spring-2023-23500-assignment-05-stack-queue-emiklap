@@ -12,8 +12,10 @@
 class Stack {
 private:
   Node *head;
+  int counter;
 public:
   Stack();
+  ~Stack();
   int push(int);
   int pop();
   int top();
