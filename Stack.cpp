@@ -16,14 +16,21 @@ Stack::~Stack() {
   walker = this->head;
   trailer = nullptr;
 
-  //this loop should stop when the middle reaches the location or when the walker goes out of bounds
   while(walker != nullptr){
     trailer=walker;
     walker = walker->getNext();
     delete trailer;
   }
 }
-
+//see if stack is full, not sure how to actually impliment this
+/*
+  * if (we cannot add another node to the stack) {
+  *  throw ERROR_FULL_STACK;
+  * } else {
+  *  do what is in the function
+  * }
+  *
+  */
 int Stack::push(int d) {
   Node *tmp = new Node(d);
   tmp->setNext(head);
@@ -43,6 +50,7 @@ int Stack::pop() {
 }
 
 int Stack::top() {
+  //see if stack is empty
   if (head == nullptr) {
     throw ERROR_EMPTY_STACK;
   } else {
