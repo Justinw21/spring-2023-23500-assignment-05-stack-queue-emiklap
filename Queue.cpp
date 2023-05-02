@@ -3,10 +3,12 @@
 #include "Queue.h"
 
 /*
- * the head/front will be the first spot of the array (index 0)
- * the tail/back will be where the next avaliabe space is
- * i had the tail variable move the head be stationary
- * the this demo quo works for a small sample size of 10 spots
+ * The head/front will be the first spot of the array (index 0).
+ * The tail/back will be where the next avaliabe space is.
+ * I had the tail variable move and the head be stationary.
+ * The tail wraps around (using mod) when it surpasses the size limit of the queue (this is how we know it filled up).
+ * The this demo queue works for a small sample size of 10 spots.
+ *
  */
 
 Queue::Queue() {
