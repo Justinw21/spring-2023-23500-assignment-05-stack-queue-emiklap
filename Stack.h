@@ -12,7 +12,6 @@
 class Stack {
 private:
   Node *head;
-  int counter;
 public:
   Stack();
   ~Stack();
